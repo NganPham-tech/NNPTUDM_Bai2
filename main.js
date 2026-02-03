@@ -76,10 +76,10 @@ function displayArray(id, data) {
 displayArray('res-4', conHangTrongKho);
 
 
-document.getElementById('res-5').innerText = sanPhamTren30 ? "Có sản phẩm giá trên 30,000,000đ" : "👉 Không có sản phẩm nào trên 30,000,000đ";
+document.getElementById('res-5').innerText = sanPhamTren30 ? "Có sản phẩm giá trên 30,000,000đ" : "Không có sản phẩm nào trên 30,000,000đ";
 
 
-document.getElementById('res-6').innerText = phukiendangban ? "Tất cả đều đang bán" : "❌ Có sản phẩm đang ngừng bán";
+document.getElementById('res-6').innerText = phukiendangban ? "Tất cả đều đang bán" : "Có sản phẩm đang ngừng bán";
 
 document.getElementById('res-7').innerText = totalGiaTriHangHoa.toLocaleString('vi-VN') + " VNĐ";
 
