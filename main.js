@@ -67,3 +67,35 @@ let sellingNames = products
     .map(item => item.name);
 
 console.log("Câu 10 - Tên các SP đang bán & còn hàng:", sellingNames);
+
+function displayArray(id, data) {
+    document.getElementById(id).innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+}
+
+
+displayArray('res-4', conHangTrongKho);
+
+
+document.getElementById('res-5').innerText = sanPhamTren30 ? "Có sản phẩm giá trên 30,000,000đ" : "👉 Không có sản phẩm nào trên 30,000,000đ";
+
+
+document.getElementById('res-6').innerText = phukiendangban ? "Tất cả đều đang bán" : "❌ Có sản phẩm đang ngừng bán";
+
+document.getElementById('res-7').innerText = totalGiaTriHangHoa.toLocaleString('vi-VN') + " VNĐ";
+
+
+let list8 = "";
+for (let item of products) {
+    list8 += `<li>${item.name} - ${item.category} - <span class="status">${item.isAvailable ? "Đang bán" : "Ngừng bán"}</span></li>`;
+}
+document.getElementById('res-8').innerHTML = list8;
+
+
+let details9 = "";
+for (let key in firstProduct) {
+    details9 += `<p><b>${key}:</b> ${firstProduct[key]}</p>`;
+}
+document.getElementById('res-9').innerHTML = details9;
+
+
+document.getElementById('res-10').innerText = "Danh sách: " + sellingNames.join(" | ");
